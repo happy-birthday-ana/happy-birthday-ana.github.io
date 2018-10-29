@@ -106,9 +106,8 @@ function update() {
 	for(i = 0; i < particles.length; i++) {
 		var p = particles[i];
 
-        if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-        hovered = true;
-        }
+		if(mouse.x > p.x && mouse.x < p.x + p.w && mouse.y > p.y && mouse.y < p.y + p.h)
+			hovered = true;
 
 		if(hovered == true) {
 
